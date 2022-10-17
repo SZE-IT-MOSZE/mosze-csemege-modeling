@@ -1,0 +1,29 @@
+@startuml
+left to right direction
+[*] --> BlinkingYellow
+state BlinkingYellow {
+}
+state Operating {
+    state Red
+    state RedYellow
+    state Green
+    state Yellow
+    [*]--> Red
+    Red --> RedYellow: [1min]
+    RedYellow --> Green: [2sec]
+    Green --> Yellow: [30sec]
+    Yellow --> Red: [2sec]
+}
+BlinkingYellow --> Operating: ontrigger
+Operating --> BlinkingYellow: offtrigger
+
+note bottom of BlinkingYellow
+    A villanyrendő sárgán villog
+end note
+
+note bottom of Operating
+    A villanyrendőr működik és irányítja a forgalmat,
+    váltogat a fények között
+end note
+
+@enduml

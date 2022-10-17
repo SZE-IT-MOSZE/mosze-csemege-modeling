@@ -25,7 +25,7 @@ Egy ötödik állapot felvételére is szükségünk lesz. A villanyrendőrnek l
 A villanyrendőr működése alapvetően időzített, viszont a bekapcsolás villogó állapotból egy külső jelzés hatására történik (_ontrigger_ esemény). Ugyaníg működő állapotból egy külső jelzés hatására (_offtrigger_ esemény) bármikor sárgán villogó állapotba vihető a villanyrendőr.
 Az időzített állapotgépekkel egy külön részterület foglalkozik (pl. [Időzített automaták, Alur és társai](https://www.sciencedirect.com/science/article/pii/0304397594900108))
 
-## Állapotgép felépítése
+## UML Állapotgép felépítése
 
 Összességében tehát öt állapotunk lesz. Ebből négy állapot egy állapotcsoportbaba szervezhető (__Működés - Operating__). Felsorolva:
 - __YellowBlinking__: ez lesz a kezdőállapotunk is, amikor tápot adunk az eszköznek, először sárgán villog
@@ -35,7 +35,7 @@ Az időzített állapotgépekkel egy külön részterület foglalkozik (pl. [Id�
   - __Green__
 
 Az operating állapoton belül időzítés alapján határozzuk meg az állapotátmeneteket (szemléltetésként az időzítések felvéve), míg a __YellowBlinking__ és az __Operating__ állapot között a következő állapotátmeneteket definiálhatjuk:
-- __Operating__-->__YellowBLinking__: _offtrigger_ esemény
+- __Operating__-->__YellowBlinking__: _offtrigger_ esemény
 - __YellowBlinking__ --> __Operating__: _ontrigger_ esemény
 
 Az állapotgép modellt az UML eszköztárat felhasználva mutatja az alábbi állapotgép ábra.

@@ -1,0 +1,14 @@
+@startuml
+'https://plantuml.com/state-diagram
+left to right direction
+[*] --> Off
+
+Off-->On: switch_up
+On --> Off: switch_down
+
+state Off
+Off: do: villany ki
+
+state On
+On: do: villany be
+@enduml

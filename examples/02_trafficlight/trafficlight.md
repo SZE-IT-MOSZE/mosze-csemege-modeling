@@ -27,7 +27,7 @@ Az időzített állapotgépekkel egy külön részterület foglalkozik (pl. [Id�
 
 ## UML Állapotgép felépítése
 
-Összességében tehát öt állapotunk lesz. Ebből négy állapot egy állapotcsoportbaba szervezhető (__Működés - Operating__). Felsorolva:
+Összességében tehát öt állapotunk lesz. Ebből négy állapot egy állapotcsoportba szervezhető (__Működés - Operating__). Felsorolva:
 - __YellowBlinking__: ez lesz a kezdőállapotunk is, amikor tápot adunk az eszköznek, először sárgán villog
 - __Operating__
   - __Red__

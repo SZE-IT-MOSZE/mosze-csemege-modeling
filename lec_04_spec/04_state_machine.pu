@@ -1,0 +1,16 @@
+@startuml
+
+[*] --> Álló
+
+Álló --> Vándorol: [dx > 5]
+
+Vándorol --> Üldöz: [dx < 5]
+Üldöz --> Vándorol: [dx >= 5]
+
+Álló -> Üldöz: [dx < 5]
+
+Üldöz --> [*]: [h==0]
+Álló --> [*]: [h==0]
+Vándorol --> [*]: [h==0]
+
+@enduml

@@ -1,0 +1,16 @@
+@startuml
+left to right direction
+class Engine 
+class Pálya 
+class Karakter 
+class Játékos {
+    +iranyitas(cmd)
+} 
+class Szörny 
+
+Játékos -|> Karakter
+Szörny -|> Karakter
+
+Engine *-- "*" Karakter : karakterek
+Engine *-- "*" Pálya : pályák
+@enduml

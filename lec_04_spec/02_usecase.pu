@@ -1,0 +1,25 @@
+@startuml
+
+left to right direction
+
+actor User as u
+
+package Játék {
+    usecase "Elindítás" as UC1
+    usecase "Pálya\nbetöltés" as UC6
+    usecase "Kilépés" as UC2
+    usecase "Újrakezdés" as UC3
+    usecase "Karakterirányítás" as UC4
+    usecase "Superpower" as UC5
+    
+    UC1 .> UC6: <<include>>
+    UC5 .> UC4: <<extend>>
+
+    
+}
+u -- UC1
+u -- UC2
+u -- UC3
+u -- UC4
+
+@enduml
